@@ -29,4 +29,10 @@ function inserirProduto() {
 
 function calcularDesconto() {
   console.log("calculandoDesconto");
+  console.log(itens.values());
+  let quantidades = new Array(itens.values);
+  let a = quantidades.forEach((quantidadeItem) => {
+    let quantidadeDeDesconto = quantidadeItem / 2;
+    console.log(quantidadeDeDesconto);
+  });
 }
