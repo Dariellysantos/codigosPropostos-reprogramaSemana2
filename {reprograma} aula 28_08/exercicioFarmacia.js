@@ -1,9 +1,19 @@
 // // Farmacia JS está em promoção. A cada 2 produtos iguais comprados, receba 5 reais de desconto.
 // // Escreva um programa para auxiliar a farmacia a calcular o valor final do produto.
+let itens = new Map();
 
 function inserirProduto() {
-  const form = document.querySelector("#codigoDoProduto").value;
-  console.log(form);
+  const item = document.querySelector("#codigoDoProduto").value;
+  console.log(item);
+
+  // itens.get(item)
+  if (itens.has(item)) {
+    let total = itens.get(item) + 1;
+    itens.set(item, total);
+  } else {
+    itens.set(item, 1);
+  }
+  console.log(itens);
 }
 
 //const inserirProduto = () => {};
