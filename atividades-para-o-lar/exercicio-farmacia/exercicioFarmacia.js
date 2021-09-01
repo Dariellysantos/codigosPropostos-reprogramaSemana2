@@ -2,6 +2,7 @@
 // // Escreva um programa para auxiliar a farmacia a calcular o valor final do produto.
 
 // 1. salvar codigos que entram pelo imput em uma lista quando apertar cadastrar
+
 let itens = new Map();
 
 function inserirProduto() {
@@ -18,10 +19,7 @@ function inserirProduto() {
   console.log(itens);
 }
 
-//const inserirProduto = () => {};
-
 // 2. fazer ação de calcular desconto quando aperta finalizar cadastro.
-
 // 3.pecorrer a lista e verificar se tem elementos iguais
 //se igual [0]  se igual [1] --> i++
 // 4. se quantidade de repetidos dividido por 2, valor inteiro multiplicado por 5
@@ -30,6 +28,7 @@ function inserirProduto() {
 function calcularDesconto() {
   console.log("calculandoDesconto");
   console.log(itens.values());
+
   let quantidades = Array.from(itens.values());
   console.log(quantidades);
 
@@ -37,8 +36,10 @@ function calcularDesconto() {
 
   quantidades.forEach((quantidadeItem) => {
     //console.log(quantidadeItem);
+
     let quantidadeDeDesconto = quantidadeItem / 2;
     //console.log(quantidadeDeDesconto);
+
     totalDesconto = totalDesconto + Math.trunc(quantidadeDeDesconto);
   });
 
