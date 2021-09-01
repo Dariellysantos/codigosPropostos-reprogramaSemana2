@@ -45,5 +45,11 @@ function calcularDesconto() {
 
   let descontoReais = totalDesconto * 5;
 
-  return descontoReais;
+  mostrarResultado(descontoReais);
+}
+
+function mostrarResultado(resultado) {
+  let descontoFinal = document.querySelector("#resultado");
+
+  descontoFinal.textContent = "R$" + " " + resultado;
 }
