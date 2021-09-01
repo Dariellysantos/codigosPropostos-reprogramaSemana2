@@ -30,9 +30,19 @@ function inserirProduto() {
 function calcularDesconto() {
   console.log("calculandoDesconto");
   console.log(itens.values());
-  let quantidades = new Array(itens.values);
-  let a = quantidades.forEach((quantidadeItem) => {
+  let quantidades = Array.from(itens.values());
+  console.log(quantidades);
+
+  let totalDesconto = 0;
+
+  quantidades.forEach((quantidadeItem) => {
+    //console.log(quantidadeItem);
     let quantidadeDeDesconto = quantidadeItem / 2;
-    console.log(quantidadeDeDesconto);
+    //console.log(quantidadeDeDesconto);
+    totalDesconto = totalDesconto + Math.trunc(quantidadeDeDesconto);
   });
+
+  let descontoReais = totalDesconto * 5;
+
+  return descontoReais;
 }
